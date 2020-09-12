@@ -10,6 +10,7 @@
 
 # production
 /build
+/.vscode/launch.json
 
 # misc
 .DS_Store
