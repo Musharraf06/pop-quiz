@@ -23,20 +23,4 @@ const data = new mongoose.Schema({
   },
 });
 
-// const user = new mongoose.Schema({
-//   name: {
-//     type: String,
-//     required: true,
-//   },
-//   title: {
-//     type: String,
-//     required: true,
-//   },
-//   set: {
-//     type: String,
-//     required: true,
-//   },
-// });
-
 module.exports = mongoose.model("Data", data);
-// module.exports = mongoose.model("User", user);

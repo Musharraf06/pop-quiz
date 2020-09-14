@@ -1,13 +1,26 @@
 import React, { Component } from 'react'
 
 export default class Result extends Component {
+    state = {
+        submit: false
+    }
+    check = () => {
+        // var score = 0;
+        console.log(this.props.correct);
+        // if (this.props.correct == this.props.selected) {
+        //     score += 1;
+        // }
+        // return this.props.correct;
+    }
     render() {
+        if (this.state.submit === true) return null
         return (
             <>
-                <span><i className="material-icons">close</i></span>
+                {this.check}
+                <span onClick={() => { this.setState({ submit: true }) }}><i className="material-icons">close</i></span>
+                {/* <span><i className="material-icons">close</i></span> */}
                 <div className="center-align">
-                    <h5>Random quiz successfully created</h5>
-                    <p>Your score out of 5</p>
+                    <h4>Your score : {this.check} of 5</h4>
                 </div>
             </>
         )

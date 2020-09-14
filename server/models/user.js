@@ -1,14 +1,18 @@
 const mongoose = require("mongoose");
 
-var score = new mongoose.Schema({
-  current_random_score: {
-    type: Number,
-    default: 0,
+const user = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
   },
-  highest_random_score: {
-    type: Number,
-    default: 0,
+  title: {
+    type: String,
+    required: true,
+  },
+  set: {
+    type: String,
+    required: true,
   },
 });
 
-module.exports = mongoose.model('Score', score);
+module.exports = mongoose.model("User", user);

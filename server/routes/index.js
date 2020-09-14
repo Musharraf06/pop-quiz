@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
 const Data = require("../models/data");
-const User = require("../models/data");
+const User = require("../models/user");
 
 router.post("/create", (req, res) => {
   var correct = req.body.group1;
@@ -17,7 +17,7 @@ router.post("/create", (req, res) => {
         req.body.option4,
       ],
       correct: correct,
-      set: req.body.set, 
+      set: req.body.set,
     },
     (err, result) => {
       if (err) {
@@ -31,6 +31,7 @@ router.post("/create", (req, res) => {
 });
 
 router.post("/submit", (req, res) => {
+  console.log(req.body.name);
   User.create(
     {
       name: req.body.name,
@@ -43,7 +44,7 @@ router.post("/submit", (req, res) => {
           console.log(err);
         }
       } else {
-        console.log("Successfully saved to database");
+        console.log("Successfully saved user to database");
       }
     }
   );

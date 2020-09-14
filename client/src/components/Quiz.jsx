@@ -4,7 +4,7 @@ import Random from '../quizService/random';
 import Aptitude from '../quizService/aptitude';
 import Question from '../components/Question';
 import Create from './Create';
-import Result from './Result';
+// import Result from './Result';
 import '../stylesheets/shared.css'
 
 export default class Quiz extends Component {
@@ -13,11 +13,6 @@ export default class Quiz extends Component {
         aptitude_data: [],
         new_data: [],
         submit: false,
-        1: false,
-        2: false,
-        3: false,
-        4: false,
-        5: false,
     };
 
     getQ = () => {
@@ -46,8 +41,8 @@ export default class Quiz extends Component {
                     <>
                         <div className='container' />
                         <div className='quiz-modal'>
-                            <Result />
-                            {/* <span onClick={this.props.Isclose}><i className="material-icons" onClick={() => {
+                            {/* <Result /> */}
+                            <span onClick={this.props.Isclose}><i className="material-icons" onClick={() => {
                                 this.setState({
                                     submit: false
                                 })
@@ -55,7 +50,7 @@ export default class Quiz extends Component {
                             <div className="center-align">
                                 <h5>Random quiz successfully created</h5>
                                 <p>Your score out of 5</p>
-                            </div> */}
+                            </div>
                         </div>
                     </>,
                     document.getElementById('portal')
@@ -70,16 +65,12 @@ export default class Quiz extends Component {
                             <h5 className='center-align'>Random</h5>
                             <hr />
                             {this.state.random_data.length > 0 && this.state.random_data.map(({
-                                question, answers, correct, questionId }) => <Question question={question} options={answers} correct={correct} key={questionId} />
+                                question, answers, correct, questionId }) => <Question done="no" question={question} options={answers} correct={correct} key={questionId} />
                             )}
                             <hr />
-                            <div>
-                                <button className='btn-small' onClick={() => {
-                                    this.setState({
-                                        submit: true
-                                    })
-                                }}>Submit</button>
-                            </div>
+                            <button className='btn-small' onClick={() => {
+                                this.setState({ submit: true })
+                            }}>Submit</button>
                         </div>
                     </>,
                     document.getElementById('portal')
@@ -116,7 +107,7 @@ export default class Quiz extends Component {
                             <h5 className='center-align'>Aptitude</h5>
                             <hr />
                             {this.state.aptitude_data.length > 0 && this.state.aptitude_data.map(({
-                                question, answers, correct, questionId }) => <Question question={question} options={answers} key={questionId} />
+                                question, answers, correct, questionId }) => <Question done="no" question={question} options={answers} key={questionId} />
                             )}
                             <hr />
                             <div>
