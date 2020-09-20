@@ -1,0 +1,38 @@
+.question-container {
+  width: 82rem;
+  height: 21rem;
+  border: 2px solid black;
+  border-radius: 4px;
+  margin: auto;
+  padding: 5px;
+}
+
+.question {
+  width: 70rem;
+  height: 3rem;
+}
+
+.options {
+  color: rgba(0, 0, 0, 0.87);
+  width: 40rem;
+  height: 10rem;
+}
+
+.radio {
+  opacity: 1 !important;
+}
+
+.hidden {
+  display: block !important;
+}
+
+.result-container {
+  text-align: center;
+  margin: auto;
+  width: 40rem;
+  transform: translate(0, 6rem);
+}
+
+.result {
+  font-size: 3rem;
+}

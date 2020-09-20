@@ -1,11 +1,11 @@
-require('dotenv').config();
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const index = require("./routes/index");
 
-// Database connections 
+// Database connections
 const db_url = "mongodb://localhost:27017/popquiz";
 const database = mongoose.connect(db_url, {
   useNewUrlParser: true,
@@ -30,7 +30,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/", index);
 
 //PORT
-const port = process.env.PORT || 5000;
+const port = 5000;
+// const port = process.env.PORT || 5000;
 app.listen(port, (req, res) => {
   console.log(`Listening at port ${port}`);
 });

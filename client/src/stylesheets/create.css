@@ -1,0 +1,29 @@
+.inline_input {
+  width: 3rem !important;
+  border-bottom: none !important;
+  margin: 0 !important;
+  margin-left: 4px !important;
+}
+
+.input{
+    width: 99% !important;
+}
+
+.input-style {
+  width: 28rem !important;
+  margin: 0px 4px !important;
+  border: 2px solid rgb(90, 89, 89) !important;
+  border-radius: 4px !important;
+  padding-left: 4px !important;
+}
+
+.input_radio {
+  position: relative;
+}
+
+.close_style {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}

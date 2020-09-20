@@ -1,12 +1,12 @@
 const set1 = [
   {
     question:
-      "Virgin Trains, Virgin Atlantic and Virgin Racing, are all companies owned by which famous entrepreneur?   ",
+      "Virgin Trains, Virgin Atlantic and Virgin Racing, are all companies owned by which famous entrepreneur?",
     answers: ["Richard Branson", "Alan Sugar", "Donald Trump", "Bill Gates"],
     correct: "Richard Branson",
     questionId: "099099"
   },
-  {
+  { 
     question:
       'Where is the train station "Llanfair­pwllgwyngyll­gogery­chwyrn­drobwll­llan­tysilio­gogo­goch"?',
     answers: ["Wales", "Moldova", "Czech Republic", "Denmark"],
@@ -371,5 +371,4 @@ const set1 = [
   }
 ];
 
-export default (n = 5) =>
-  Promise.resolve(set1.sort(() => 0.5 - Math.random()).slice(0, n));
+export default set1;

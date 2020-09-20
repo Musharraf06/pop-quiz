@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  font-size: 3.5rem;
+  font-weight: 200;
+}
+
+.background {
+  background-color: #e4e4e4;
+  height: 100vmin;
+  /* background-image: url("../assets/home.jpeg"); */
+  /* background-size: cover; */
+}

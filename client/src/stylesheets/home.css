@@ -1,0 +1,25 @@
+.home {
+  background-image: url("../assets/home.png");
+  background-size: cover;
+  height: 100vmin;
+}
+
+.container {
+  position: relative;
+  top: 5rem;
+}
+
+.home-btn {
+  font-size: 19px;
+  display: block;
+  background-color: #e8e7e7;
+  color: rgba(0, 0, 0, 0.7);
+  margin: auto;
+  width: 16rem;
+  padding: 4px;
+  border: 2px solid #3a8d5f;
+  border-radius: 4px;
+  margin-bottom: 25px;
+  position: relative;
+  top: 3rem;
+}
