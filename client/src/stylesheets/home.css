@@ -7,12 +7,17 @@
 .container {
   position: relative;
   top: 5rem;
+  cursor: default;
+}
+
+.home-btn:hover {
+  background-color: #c7c3c3;
 }
 
 .home-btn {
   font-size: 19px;
   display: block;
-  background-color: #e8e7e7;
+  background-color: #e7e7e7;
   color: rgba(0, 0, 0, 0.7);
   margin: auto;
   width: 16rem;
@@ -22,4 +27,5 @@
   margin-bottom: 25px;
   position: relative;
   top: 3rem;
+  cursor: default;
 }

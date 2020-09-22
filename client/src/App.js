@@ -20,10 +20,10 @@ const App = () => {
               <New />
             </Route>
             <Route path="/random">
-              <Question />
+              <Question file={1}/>
             </Route>
             <Route path="/aptitude">
-              <Question />
+              <Question file={2} />
             </Route>
             <Route path="/create">
               <Create set={0} />
