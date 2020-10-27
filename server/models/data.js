@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const data = new mongoose.Schema({
-  question_no: {
+  questionNo: {
     type: Number,
     required: true,
   },
@@ -9,7 +9,7 @@ const data = new mongoose.Schema({
     type: String,
     required: true,
   },
-  options: {
+  answers: {
     type: Array,
     required: true,
   },

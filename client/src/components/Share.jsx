@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import getid from '../reuse';
 
-const Share = (props) => {
+const Share = () => {
     const [close, set_close] = useState(false);
 
     const close_style = {
@@ -19,11 +19,13 @@ const Share = (props) => {
     const copy_to_clipboard = () => {
         var copy = getid('copy');
         copy.select();
-        copy.setSelectionRange(0, 99999);
+        copy.setSelectionRange(0, 200);
         document.execCommand("copy");
         document.getElementById("span").innerText = "Copied"
     }
-    const address = "localhost:3000/quiz/?set=" + props.set
+
+    var add = window.location.href.slice(-4);
+    const address = "localhost:3000/quiz/" + add;
     if (close === true) window.location = "http://localhost:3000/"
     return (
         <>

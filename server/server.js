@@ -4,6 +4,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const index = require("./routes/index");
+const cors = require("cors");
 
 // Database connections
 const db_url = "mongodb://localhost:27017/popquiz";
@@ -19,10 +20,9 @@ mongoose.connection.on("error", (err) => {
 });
 
 // Middleware Setup
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
 // app.use(express.static('client'));
 // app.use(express.static(path.join(__dirname, 'build')));
 

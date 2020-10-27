@@ -5,14 +5,14 @@
   margin-left: 4px !important;
 }
 
-.input{
-    width: 99% !important;
+.input {
+  width: 99% !important;
 }
 
 .input-style {
   width: 28rem !important;
-  margin: 0px 4px !important;
-  border: 2px solid rgb(90, 89, 89) !important;
+  margin: 20px 0px !important;
+  border: 3px solid rgb(90, 89, 89) !important;
   border-radius: 4px !important;
   padding-left: 4px !important;
 }
@@ -26,4 +26,21 @@
   top: 1rem;
   right: 1rem;
   cursor: pointer;
+}
+
+.details-container {
+  margin: auto;
+  width: 31rem;
+  height: 31rem;
+  border: 3px solid rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.questions-container{
+  margin: auto;
+  width: 85%;
+  padding: 12px;
+  border: 3px solid rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
 }
