@@ -29,7 +29,7 @@ const Home = () => {
                 <div className="center-align container">
                     <span className="header">Pop - Quiz</span>
                     <Router>
-                        <Link to="/random" className="home-btn" onClick={setRandom}>General Questions</Link>
+                        <Link to="/random" className="home-btn btn btn-primary" onClick={setRandom}>General Questions</Link>
                     </Router>
 
                     <Router>

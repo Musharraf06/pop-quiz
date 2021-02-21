@@ -1,7 +1,6 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
-const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const index = require("./routes/index");
 const cors = require("cors");
@@ -20,8 +19,6 @@ mongoose.connection.on("error", (err) => {
 });
 
 // Middleware Setup
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 // app.use(express.static('client'));
 // app.use(express.static(path.join(__dirname, 'build')));

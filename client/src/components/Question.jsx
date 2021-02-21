@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import set1 from '../quizService/data';
-import set2 from '../quizService/aptitude';
+import set1 from '../helpers/data';
+import set2 from '../helpers/aptitude';
 import getid from '../reuse';
 import '../stylesheets/question.css';
 
@@ -200,14 +200,15 @@ function Question(props) {
 
                 <div id="options" className="options">
                     <ol type="A">
-                        {currentOptions.map((option =>
-                            <li className="single-option">
+                        {currentOptions.map((option, index) => {
+                            return <li key={index} className="single-option">
                                 <div onClick={answer}>
                                     <span className="options" id={"span" + optionNo} onClick={setId}>{option}</span>
                                     <span style={{ display: "none" }}>{optionNo > 4 ? optionNo = 1 : optionNo += 1}</span>
                                 </div>
                             </li>
-                        ))}
+                        }
+                        )}
                     </ol>
                 </div>
 
