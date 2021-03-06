@@ -1,7 +1,12 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
   color: rgba(0, 0, 0, 0.8);
+  scroll-behavior: smooth;
 }
 
 hr {
@@ -20,4 +25,15 @@ hr {
 .header {
   font-size: 3.5rem;
   font-weight: 200;
+}
+
+.main-body-constainer {
+  display: grid;
+  place-items: center;
+  padding-top: 3rem;
+}
+
+.tabs {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.57);
 }
