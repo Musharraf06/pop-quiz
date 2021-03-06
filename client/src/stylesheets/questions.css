@@ -1,0 +1,17 @@
+.correct {
+  border-color: teal !important;
+}
+
+.wrong {
+  border-color: tomato !important;
+}
+
+.disabled {
+  background-color: rgb(179 167 167 / 18%) !important;
+  cursor: not-allowed;
+}
+
+.result-container {
+  display: grid;
+  place-items: center;
+}

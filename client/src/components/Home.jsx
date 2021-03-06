@@ -1,101 +1,53 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
-import Quiz from '../components/Quiz';
+import React from 'react';
+import NavBar from './NavBar';
+import Footer from './Footer';
 import '../stylesheets/home.css';
 
 const Home = () => {
-    const [open, setOpen] = useState(false);
-    const [source, setSource] = useState('new');
-    const close = () => { setOpen(false) };
-    const setRandom = () => {
-        setOpen(true);
-        setSource('random');
-        window.location = "/random";
-    }
-    const setAptitude = () => {
-        setOpen(true);
-        setSource('aptitude');
-        window.location = "/aptitude";
-    }
-    const setCreate = () => {
-        setOpen(true);
-        setSource('create');
-        window.location = "/create";
-    }
-
-    return (
-        <>
-            <div className="home">
-                <div className="center-align container">
-                    <span className="header">Pop - Quiz</span>
-                    <Router>
-                        <Link to="/random" className="home-btn btn btn-primary" onClick={setRandom}>General Questions</Link>
-                    </Router>
-
-                    <Router>
-                        <Link to="/aptitude" className="home-btn" onClick={setAptitude}>Aptitude Questions</Link>
-                    </Router>
-
-                    <Router>
-                        <Link to="/create" className="home-btn" onClick={setCreate}>Create Your Own Quiz</Link>
-                    </Router>
+  return (
+    <>
+      <NavBar />
+      <div style={{ height: '84vh' }}>
+        <div className='main-body-constainer'>
+          <h1>Pop Quiz</h1>
+          <p>
+            A quiz platform for you. Take quiz, create one and share with your
+            others
+          </p>
+        </div>
+        <div className='container'>
+          <div className='row'>
+            <div className='col card mx-3 px-0'>
+              <h5 className='card-header'>Take quiz</h5>
+              <div className='card-body'>
+                <div className='card-text py-4'>
+                  Take a quiz with predefined question on various categories
                 </div>
+                <a href='/quiz' className='btn btn-primary'>
+                  Start
+                </a>
+              </div>
             </div>
-
-            {/* <div style={container_div}>
-                <div className="row" style={row}>
-                    <div className="col s12 m6">
-                        <div className="card blue-grey darken-1">
-                            <div className="card-content white-text">
-                                <span className="card-title">Random</span>
-                                <p>Your Score : {}</p>
-                                <p>Highest Score : {}</p>
-                            </div>
-                            <div className="card-action">
-                                <Router>
-                                    <Link to="/random" onClick={setRandom}>Play</Link>
-                                </Router>
-                            </div>
-                        </div>
-                    </div>
+            <div className='col card mx-3 px-0'>
+              <h5 className='card-header'>Create Quiz</h5>
+              <div className='card-body'>
+                <div className='card-text'>
+                  <p>
+                    Create your own custom quiz by dropping files or filling out
+                    forms and share with others
+                  </p>
                 </div>
-
-                <div className="row" style={row}>
-                    <div className="col s12 m6">
-                        <div className="card blue-grey darken-1">
-                            <div className="card-content white-text">
-                                <span className="card-title">Aptitude</span>
-                                <p>Your Score : {}</p>
-                                <p>Highest Score : {}</p>
-                            </div>
-                            <div className="card-action">
-                                <Router>
-                                    <Link to="/aptitude" onClick={setAptitude}>Play</Link>
-                                </Router>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="row" style={row}>
-                    <div className="col s12 m6">
-                        <div className="card blue-grey darken-1">
-                            <div className="card-content white-text">
-                                <span className="card-title">Create Quiz</span>
-                                <span>Create custom quiz and share</span>
-                            </div>
-                            <div className="card-action">
-                                <Router>
-                                    <Link to="/create" onClick={setCreate}>Create</Link>
-                                </Router>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-           </div> */}
-            <Quiz isOpen={open} Isclose={close} source={source} />
-        </>
-    );
-}
+                <a href='/create' className='btn btn-primary'>
+                  Create
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
+  );
+};
 
 export default Home;
